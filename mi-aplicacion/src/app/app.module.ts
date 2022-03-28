@@ -10,7 +10,7 @@
 		      config: {
 		        url: 'http://172.17.0.1:8080/auth',
 		        realm: 'master',
-		        clientId: 'angular'
+		        clientId: 'mi-aplicacion-angular'
 		      },
 		      initOptions: {
 		        onLoad: 'check-sso',
