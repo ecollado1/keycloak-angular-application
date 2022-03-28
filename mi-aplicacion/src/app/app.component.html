@@ -1,0 +1,30 @@
+<h1>Mi Aplicación Angular con Keycloak</h1>
+
+		<button *ngIf="isLogueado" type="button" (click)="cerrarSesion()">Cerrar Session</button>
+		<button *ngIf="!isLogueado" type="button" (click)="iniciarSesion()">Iniciar Session</button>
+
+		<ng-container *ngIf="perfilUsuario">
+		  <h2>Informacion del Usuario</h2>
+		  <table>
+		    <tr *ngIf="perfilUsuario.username">
+		      <th scope="row">Usuario</th>
+		      <td>{{ perfilUsuario.username }}</td>
+		    </tr>
+		    <tr *ngIf="perfilUsuario.firstName">
+		      <th scope="row">Primer Nombre</th>
+		      <td>{{ perfilUsuario.firstName }}</td>
+		    </tr>
+		    <tr *ngIf="perfilUsuario.lastName">
+		      <th scope="row">Segundo Nombre</th>
+		      <td>{{ perfilUsuario.lastName }}</td>
+		    </tr>
+		    <tr *ngIf="perfilUsuario.email">
+		      <th scope="row">Correo Electronico</th>
+		      <td>{{ perfilUsuario.email }}</td>
+		    </tr>
+		    <tr>
+		      <th scope="row">Correo Verificado</th>
+		      <td>{{ perfilUsuario.emailVerified ? 'Si' : 'No' }}</td>
+		    </tr>
+		  </table>
+		</ng-container>
